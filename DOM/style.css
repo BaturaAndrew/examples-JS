@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  /* background-color: #C3C6C2; */
+}
+
+.block1 {
+  width: 350px;
+  height: 350px;
+  background: red;
+  position: relative;
+}
+
+.block2 {
+  width: 150px;
+  height: 150px;
+  background: green;
+  margin: 50px 10px;
+  position: relative;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  background: silver;
+}
+
+li.-removed {
+  text-decoration: line-through;
+}
