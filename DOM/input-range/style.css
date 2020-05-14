@@ -1,0 +1,50 @@
+html {
+  margin: 1em;
+}
+
+.range {
+  position: relative;
+}
+
+.range__input {
+  width: 100%;
+  -webkit-appearance: none;
+}
+
+.range__input::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+
+.range__input::-moz-range-thumb {
+  background: #ccc;
+}
+
+.range__input::-ms-track {
+  background: transparent;
+}
+
+.range__input::-ms-fill-lower {
+  background: #e1e1e1;
+  border-radius: 10px;
+}
+
+.range__input::-ms-fill-upper {
+  background: #eee;
+}
+
+.range__list {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.range__list__opt:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: auto;
+  padding-left: 3px;
+  text-indent: 0;
+}

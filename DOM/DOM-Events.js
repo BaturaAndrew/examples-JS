@@ -17,7 +17,7 @@ function renderItem(conteiner, items) {
 }
 // item.removed ? '-removed' : ''
 
-// renderItem(ul, data);
+renderItem(ul, data);
 
 document.body.appendChild(input);
 document.body.appendChild(button);
@@ -33,5 +33,5 @@ button.addEventListener('click', () => {
   data.push({
     name: input.value
   });
-  // renderItem(ul, data);
+  renderItem(ul, data);
 })

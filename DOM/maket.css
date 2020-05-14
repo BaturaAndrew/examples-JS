@@ -1,0 +1,116 @@
+button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: inset 0px 0px 1px rgba(0, 0, 0, .2);
+  z-index: -1;
+}
+
+button {
+  position: relative;
+}
+
+.header,
+.navbar,
+.content,
+.footer,
+.sidebar {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 4px;
+}
+
+.header {
+  width: 100%;
+  height: 120px;
+  background-color: #002A92;
+}
+
+.main {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #2563FF;
+  text-align: center;
+}
+
+.navbar a {
+  color: #ffffff;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  background-color: #002A92;
+}
+
+.sidebar.left {
+  background-color: #002A92;
+}
+
+.sidebar.right {
+  background-color: #002A92;
+}
+
+.content {
+  background-color: #7BA0FF;
+}
+
+
+
+/* flexbox code*/
+html {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+
+.header {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.main {
+  flex: auto;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.inner {
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.header,
+.footer,
+.navbar {
+  /* flex: 1 1 100%; */
+}
+
+.sidebar {
+  flex: 0 0 200px;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  min-height: 300px;
+  flex: 1 1 360px;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
