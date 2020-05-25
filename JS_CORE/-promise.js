@@ -6,13 +6,11 @@
 //   XMLHttpRequest,
 // } = require('xmlhttprequest');
 
-
 // let data;
 // fetch('https://api.github.com/users/baturaandrew/repos')
 //   .then(response => response.text()).then((res) => {
 //     data = res;
 //   });
-
 
 // // // Создаётся объект promise
 // const promise = new Promise((resolve, reject) => {
@@ -36,7 +34,6 @@
 //       console.log(`Rejected: ${error.message}`); // error - аргумент reject
 //     },
 //   );
-
 
 // function httpGet(url) {
 //   return new Promise(
@@ -69,7 +66,6 @@
 //     error => console.log(`Rejected: ${error}`),
 //   );
 
-
 // (async () => {
 //   try {
 //     const data = await httpGet('https://api.github.com/users/baturaandrew/repos');
@@ -78,7 +74,6 @@
 //     console.log(err);
 //   }
 // })();
-
 
 // httpGet('https://api.github.com/users')
 //   .then(JSON.parse)
@@ -106,7 +101,6 @@
 //     alert(error); // Error: Not Found
 //   });
 
-
 // (async () => {
 //   const user = await fetch('https://api.github.com/users').then(response => response.text()).then(JSON.parse);
 //   const githubUser = await fetch(`https://api.github.com/users/${user[1].login}`).then(response => response.text()).then(JSON.parse);
@@ -117,7 +111,6 @@
 //   document.body.appendChild(img);
 //   setTimeout(() => img.remove(), 3000);
 // })();
-
 
 // (async () => {
 //   const user = JSON.parse(await httpGet('https://api.github.com/users'));

@@ -5,4 +5,4 @@ function sum(x, y) {
 }
 let diff = function (x, y) {
   return x - y;
-}
+};

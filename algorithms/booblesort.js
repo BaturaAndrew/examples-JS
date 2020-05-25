@@ -1,5 +1,5 @@
 const arr = [1, 9, 3, 2, 8, 4];
-
+// O(n²)
 function bubbleSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length - 1 - i; j++) {
@@ -15,7 +15,6 @@ function bubbleSort(arr) {
 
 bubbleSort(arr);
 // console.log(arr);
-
 
 function fibonacci(n) {
   var fibo = [0, 1];

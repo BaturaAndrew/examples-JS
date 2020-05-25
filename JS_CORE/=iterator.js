@@ -1,31 +1,27 @@
 // https://learn.javascript.ru/iterable
 
-
 // Итерируемые объекты – это объекты, которые реализуют метод Symbol.iterator, как было описано выше.
 // Псевдомассивы – это объекты, у которых есть индексы и свойство length, то есть, они выглядят как массивы.
 
 // Array.from принимает итерируемый объект или псевдомассив и делает из него «настоящий» Array
-let arrayLike = {
-  0: "Hello",
-  1: "World",
-  length: 2
+const arrayLike = {
+  0: 'Hello',
+  1: 'World',
+  length: 2,
 };
 
-let arr = Array.from(arrayLike); // (*)
+const arr = Array.from(arrayLike); // (*)
 alert(arr.pop()); // World (метод работает)
 
-
-
-let range = {
+const range = {
   from: 1,
-  to: 5
+  to: 5,
 };
 
-// Cделать range итерируемым 
+// Cделать range итерируемым
 
 // 1. вызов for..of сначала вызывает эту функцию
 range[Symbol.iterator] = function () {
-
   // ...она возвращает объект итератора:
   // 2. Далее, for..of работает только с этим итератором, запрашивая у него новые значения
   return {
@@ -36,22 +32,20 @@ range[Symbol.iterator] = function () {
     next() {
       // 4. он должен вернуть значение в виде объекта {done:.., value :...}
       if (this.current <= this.last) {
-        return { done: false, value: this.current++ };
-      } else {
-        return { done: true };
+        return {done: false, value: this.current++};
       }
-    }
+      return {done: true};
+    },
   };
 };
 
 // теперь работает!
-for (let num of range) {
+for (const num of range) {
   console.log(num); // 1, затем 2, 3, 4, 5
 }
 
-
 // ИЛИ
-let range2 = {
+const range2 = {
   from: 1,
   to: 5,
 
@@ -62,13 +56,12 @@ let range2 = {
 
   next() {
     if (this.current <= this.to) {
-      return { done: false, value: this.current++ };
-    } else {
-      return { done: true };
+      return {done: false, value: this.current++};
     }
-  }
+    return {done: true};
+  },
 };
 
-for (let num of range2) {
+for (const num of range2) {
   console.log(num); // 1, затем 2, 3, 4, 5
 }

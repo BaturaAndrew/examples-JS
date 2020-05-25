@@ -4,87 +4,92 @@ let element = 0;
 
 // BASE METHODS
 length = array.push(1); // add to the end
-console.log('PUSH method:  new length: ' + length + ' Array: ' + array + '\n');
+console.log(`PUSH method:  new length: ${length} Array: ${array}\n`);
 length = array.unshift(2); // add to he head
-console.log('UNSHIFT method: new length: ' + length + ' Array: ' + array + '\n');
+console.log(`UNSHIFT method: new length: ${length} Array: ${array}\n`);
 element = array.pop(); // delete the last elem
-console.log('POP method: new elem: ' + element + ' Array: ' + array + '\n');
+console.log(`POP method: new elem: ${element} Array: ${array}\n`);
 element = array.shift(); // delete the first elem
-console.log('SHIFT method: new elem: ' + element + ' Array: ' + array + '\n');
+console.log(`SHIFT method: new elem: ${element} Array: ${array}\n`);
 
 // FILL isArray
-
 
 // METHOD SPLICE CHANGE ARRAY
 array = [];
 array.push(1, 2, 3, 4, 5, 6);
-console.log('Array: ' + array);
+console.log(`Array: ${array}`);
 let startPosition = 2;
 let endPosition = 4;
-let count = 2;
+const count = 2;
 const addedElem = 99;
 let deletedElements = array.splice(startPosition, count);
-console.log('SPLICE method: deleted elements: ' + deletedElements + ' Array: ' + array + '\n');
+console.log(
+  `SPLICE method: deleted elements: ${deletedElements} Array: ${array}\n`
+);
 
 array = [1, 2, 3, 4, 5, 6];
-console.log('Array: ' + array);
+console.log(`Array: ${array}`);
 deletedElements = array.splice(startPosition); // DELETE ALL ELEMENTS AFTER startPosition
-console.log('SPLICE method: deleted elements: ' + deletedElements + ' Array: ' + array + '\n');
+console.log(
+  `SPLICE method: deleted elements: ${deletedElements} Array: ${array}\n`
+);
 
 array = [1, 2, 3, 4, 5, 6];
-console.log('Array: ' + array);
-deletedElements = array.splice(-2, 1);  // DELETE FROM THE END
-console.log('SPLICE method: deleted elements: ' + deletedElements + ' Array: ' + array + '\n');
+console.log(`Array: ${array}`);
+deletedElements = array.splice(-2, 1); // DELETE FROM THE END
+console.log(
+  `SPLICE method: deleted elements: ${deletedElements} Array: ${array}\n`
+);
 
 // METHOD SLICE DON'T CHANGE ARRAY
 array = [1, 2, 3, 4, 5, 6];
-console.log('Array: ' + array);
+console.log(`Array: ${array}`);
 startPosition = 2;
 endPosition = 4;
 let newArray = array.slice(startPosition, endPosition);
-console.log('SLICE method: New array: ' + newArray + ' Array: ' + array + '\n');
+console.log(`SLICE method: New array: ${newArray} Array: ${array}\n`);
 newArray = array.slice(); // COPY ARRAY
-console.log('SLICE method:  New array: ' + newArray + ' Array: ' + array + '\n');
+console.log(`SLICE method:  New array: ${newArray} Array: ${array}\n`);
 
 // METHOD CONCAT DON'T CHANGE ARRAY
 newArray = array.concat(9, 9, 9);
-console.log('CONCAT method:  New array: ' + newArray + ' Array: ' + array + '\n');
+console.log(`CONCAT method:  New array: ${newArray} Array: ${array}\n`);
 
 // INDEXOF
 let index = 0;
 index = array.indexOf(5);
-console.log('INDEXOF method: index: ' + index + ' Array: ' + array + '\n');
+console.log(`INDEXOF method: index: ${index} Array: ${array}\n`);
 
-//FIND
-element = array.find((el) => el == 5)
-console.log('FIND method: elem: ' + element + ' Array: ' + array + '\n');
+// FIND
+element = array.find(el => el == 5);
+console.log(`FIND method: elem: ${element} Array: ${array}\n`);
 
-
-// FILTER  
-newArray = array.filter((el) => !(el % 2));
-console.log('FILTER method: New Array: ' + newArray + ' Array: ' + array + '\n');
-
+// FILTER
+newArray = array.filter(el => !(el % 2));
+console.log(`FILTER method: New Array: ${newArray} Array: ${array}\n`);
 
 // SORT CHANGE ARRAY
 array = [5, 3, 62, 1, 65, 0, 21];
 const sortedArray = array.sort((a, b) => a - b);
-console.log('SORT method: Sorted Array: ' + sortedArray + ' Array: ' + array + '\n');
+console.log(`SORT method: Sorted Array: ${sortedArray} Array: ${array}\n`);
 
-// REVERSE SPLIT JOIN 
+// REVERSE SPLIT JOIN
 const reversedArray = array.reverse();
-console.log('REVERSE method: Reversed Array: ' + reversedArray + ' Array: ' + array + '\n');
+console.log(
+  `REVERSE method: Reversed Array: ${reversedArray} Array: ${array}\n`
+);
 
 // SPLIT
 const str = 'aple;banana;rice;milk;tea;pineapple';
-array = str.split(';')
-console.log('SPLIT method: Array: ' + array + '\n');
+array = str.split(';');
+console.log(`SPLIT method: Array: ${array}\n`);
 array.sort((a, b) => a > b);
-console.log('SPLIT method: Array: ' + array + '\n');
+console.log(`SPLIT method: Array: ${array}\n`);
 
-// JOIN 
+// JOIN
 let strFromArray = '';
 strFromArray = array.join('+');
-console.log('JOIN method: STR: ' + strFromArray + '\n');
+console.log(`JOIN method: STR: ${strFromArray}\n`);
 
 // Шпаргалка по методам массива:
 
@@ -114,13 +119,13 @@ console.log('JOIN method: STR: ' + strFromArray + '\n');
 // split / join – преобразует строку в массив и обратно.
 // reduce(func, initial) – вычисляет одно значение на основе всего массива, вызывая func для каждого элемента и передавая промежуточный результат между вызовами.
 
-//Дополнительно:
+// Дополнительно:
 // Array.isArray(arr) проверяет, является ли arr массивом.
 // Обратите внимание, что методы sort, reverse и splice изменяют исходный массив.
 
 // arr.some(fn) / arr.every(fn) проверяет массив.
 // Функция fn вызывается для каждого элемента массива аналогично map.
-//Если какие - либо / все результаты вызовов являются true, то метод возвращает true, иначе false.
+// Если какие - либо / все результаты вызовов являются true, то метод возвращает true, иначе false.
 // arr.fill(value, start, end) – заполняет массив повторяющимися value, начиная с индекса start до end.
-// arr.copyWithin(target, start, end) – копирует свои элементы, начиная со start и заканчивая end, 
-//в собственную позицию target(перезаписывает существующие).
+// arr.copyWithin(target, start, end) – копирует свои элементы, начиная со start и заканчивая end,
+// в собственную позицию target(перезаписывает существующие).

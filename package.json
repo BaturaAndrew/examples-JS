@@ -1,0 +1,35 @@
+{
+  "name": "examples-js",
+  "version": "1.0.0",
+  "description": "Examples of JS core",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint  --fix JS_CORE/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaturaAndrew/examples-JS.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "Batura Andrew",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaturaAndrew/examples-JS/issues"
+  },
+  "homepage": "https://github.com/BaturaAndrew/examples-JS#readme",
+  "dependencies": {
+    "eslint": "^7.1.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.20.0",
+    "prettier": "^2.0.5"
+  }
+}
