@@ -3,7 +3,9 @@
     "airbnb",
     "prettier"
   ],
-  "rules": {},
+  "rules": {
+    "no-console": 0
+  },
   "plugins": [
     "prettier"
   ]
